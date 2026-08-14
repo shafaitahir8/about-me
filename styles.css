@@ -77,7 +77,12 @@ button { color: inherit; }
 .site-header.is-scrolled { background: color-mix(in srgb, var(--paper) 88%, transparent); border-color: var(--line); backdrop-filter: blur(16px); }
 .nav-wrap { display: flex; align-items: center; justify-content: space-between; gap: 30px; }
 .brand { display: inline-flex; align-items: center; gap: 12px; line-height: 1.1; }
-.brand-symbol { width: 46px; height: 46px; display: grid; place-items: center; border-radius: 50%; background: var(--accent); color: var(--button-on); font: italic 32px/1 var(--serif); transform: rotate(-8deg); }
+.brand-symbol {
+    width: 46px;
+    height: 46px;
+    object-fit: contain; /* Prevents image stretching */
+    transform: rotate(-8deg); /* Optional: keep if you want the logo tilted */
+}
 .brand > span:last-child { display: grid; gap: 5px; }
 .brand strong { font-size: 15px; letter-spacing: -.025em; }
 .brand small { color: var(--muted); font-size: 12px; }
